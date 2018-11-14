@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
 import Router from 'next/router';
@@ -73,6 +74,6 @@ const Header = () => (
     </div>
     <div>Cart</div>
   </StyledHeader>
-)
+);
 
 export default Header;

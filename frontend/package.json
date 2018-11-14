@@ -8,7 +8,9 @@
     "build": "next build",
     "start": "next start",
     "test": "NODE_ENV=test jest --watch",
-    "heroku-postbuild": "next build"
+    "heroku-postbuild": "next build",
+    "eslint": "eslint .",
+    "eslint:fix": "eslint --fix ."
   },
   "author": "",
   "license": "ISC",
@@ -38,10 +40,19 @@
     "waait": "^1.0.2"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
     "babel-plugin-module-resolver": "^3.1.1",
     "casual": "^1.5.19",
     "enzyme-to-json": "^3.3.4",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-iaguilarmartin": "^1.0.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
     "graphql-tools": "^4.0.0",
     "jest": "^23.6.0",
     "jest-transform-graphql": "^2.1.0"

@@ -1,8 +1,10 @@
+import React from 'react';
+
 import UpdateItem from '../components/UpdateItem';
 
-const Update = props => (
+const Update = ({ query }) => (
   <div>
-    <UpdateItem id={props.query.id} />
+    <UpdateItem id={query.id} />
   </div>
 );
 
