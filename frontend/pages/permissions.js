@@ -1,14 +1,14 @@
 import React from 'react';
 
-import CreateItem from '../components/CreateItem';
 import PleaseSignin from '../components/PleaseSignin';
+import Permissions from '../components/Permissions';
 
-const Sell = () => (
+const PermissionsPage = () => (
   <div>
     <PleaseSignin>
-      <CreateItem />
+      <Permissions />
     </PleaseSignin>
   </div>
 );
 
-export default Sell;
+export default PermissionsPage;

@@ -4,7 +4,7 @@ services:
     image: prismagraphql/prisma:1.14
     restart: always
     ports:
-    - "4466:4466"
+      - '4466:4466'
     environment:
       PRISMA_CONFIG: |
         port: 4466
@@ -21,6 +21,8 @@ services:
   mysql:
     image: mysql:5.7
     restart: always
+    ports:
+      - '32772:3306'
     environment:
       MYSQL_ROOT_PASSWORD: prisma
     volumes:
