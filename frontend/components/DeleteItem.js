@@ -41,7 +41,7 @@ class DeleteItem extends Component {
                 // eslint-disable-next-line no-alert
                 window.confirm('Are you sure you want to delete this item?')
               ) {
-                deleteItem();
+                deleteItem().catch(err => alert(err.message));
               }
             }}
           >
