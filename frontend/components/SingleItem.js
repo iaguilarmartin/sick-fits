@@ -3,6 +3,7 @@ import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 import styled from 'styled-components';
 import Head from 'next/head';
+
 import ErrorMessage from './ErrorMessage';
 
 const SingleItemStyles = styled.div`

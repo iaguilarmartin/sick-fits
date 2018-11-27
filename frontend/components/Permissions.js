@@ -1,6 +1,7 @@
 import React from 'react';
 import { Query, Mutation } from 'react-apollo';
 import gql from 'graphql-tag';
+
 import ErrorMessage from './ErrorMessage';
 import Table from './styles/Table';
 import SickButton from './styles/SickButton';
@@ -75,7 +76,7 @@ const Permissions = () => (
 
 class UserPermissions extends React.Component {
   state = {
-    permissions: this.props.user.permissions
+    permissions: this.props.user.permissions // eslint-disable-line react/destructuring-assignment
   };
 
   handlePermissionChange = e => {

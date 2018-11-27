@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import gql from 'graphql-tag';
 import { Mutation, Query } from 'react-apollo';
+
 import Form from './styles/Form';
 import ErrorMessage from './ErrorMessage';
 
