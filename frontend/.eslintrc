@@ -1,5 +1,5 @@
 {
-  "extends": "iaguilarmartin/react",
+  "extends": ["iaguilarmartin/react", "iaguilarmartin/jest"],
   "rules": {
     "react/prop-types": 0,
     "jsx-a11y/anchor-is-valid": 0,
