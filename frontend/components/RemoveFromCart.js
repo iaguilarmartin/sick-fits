@@ -57,4 +57,5 @@ const RemoveFromCart = ({ id }) => (
   </Mutation>
 );
 
+export { REMOVE_FROM_CART_MUTATION };
 export default RemoveFromCart;

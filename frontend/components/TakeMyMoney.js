@@ -49,36 +49,40 @@ class TakeMyMoney extends React.Component {
 
     return (
       <User>
-        {({ data: { me } }) => (
-          <Mutation
-            mutation={CREATE_ORDER_MUTATION}
-            refetchQueries={[
-              {
-                query: CURRENT_USER_QUERY
-              }
-            ]}
-          >
-            {createOrder => (
-              <StripeCheckout
-                name="Sick Fits"
-                description={`Order of ${totalItems(me.cart)}`}
-                amount={calcTotalPrice(me.cart)}
-                image={
-                  me.cart.length && me.cart[0].item && me.cart[0].item.image
+        {({ data: { me }, loading }) => {
+          if (loading) return null;
+          return (
+            <Mutation
+              mutation={CREATE_ORDER_MUTATION}
+              refetchQueries={[
+                {
+                  query: CURRENT_USER_QUERY
                 }
-                stripeKey="pk_test_Pl6g30SbHYNkxZt0CeegHvqs"
-                currency="USD"
-                email={me.email}
-                token={res => this.onToken(res, createOrder)}
-              >
-                {children}
-              </StripeCheckout>
-            )}
-          </Mutation>
-        )}
+              ]}
+            >
+              {createOrder => (
+                <StripeCheckout
+                  name="Sick Fits"
+                  description={`Order of ${totalItems(me.cart)}`}
+                  amount={calcTotalPrice(me.cart)}
+                  image={
+                    me.cart.length && me.cart[0].item && me.cart[0].item.image
+                  }
+                  stripeKey="pk_test_Pl6g30SbHYNkxZt0CeegHvqs"
+                  currency="USD"
+                  email={me.email}
+                  token={res => this.onToken(res, createOrder)}
+                >
+                  {children}
+                </StripeCheckout>
+              )}
+            </Mutation>
+          );
+        }}
       </User>
     );
   }
 }
 
+export { CREATE_ORDER_MUTATION };
 export default TakeMyMoney;

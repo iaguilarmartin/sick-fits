@@ -38,7 +38,7 @@ const Order = ({ id }) => (
       if (loading) return <p>Loading...</p>;
       const { order } = data;
       return (
-        <OrderStyles>
+        <OrderStyles data-test="order">
           <Head>
             <title>Sick Fits - Order {order.id}</title>
           </Head>
@@ -82,4 +82,5 @@ const Order = ({ id }) => (
   </Query>
 );
 
+export { SINGLE_ORDER_QUERY };
 export default Order;

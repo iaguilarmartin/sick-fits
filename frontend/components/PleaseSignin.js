@@ -22,3 +22,4 @@ const PleaseSignIn = ({ children }) => (
 );
 
 export default PleaseSignIn;
+export { CURRENT_USER_QUERY };

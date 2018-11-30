@@ -44,9 +44,10 @@ const SingleItem = ({ id }) => (
     }}
   >
     {({ error, loading, data }) => {
-      const { item } = data;
       if (error) return <ErrorMessage error={error} />;
       if (loading) return <p>Loading...</p>;
+
+      const { item } = data;
       if (!item) return <p>No item found for {id}</p>;
       return (
         <SingleItemStyles>
@@ -65,3 +66,4 @@ const SingleItem = ({ id }) => (
 );
 
 export default SingleItem;
+export { SIGLE_ITEM_QUERY };

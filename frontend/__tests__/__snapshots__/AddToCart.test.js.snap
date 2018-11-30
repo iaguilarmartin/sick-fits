@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AddToCart/> renders and matches the snap shot 1`] = `
+<button
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+>
+  Add
+   to Cart
+   
+  <span
+    aria-label="Cart emoji"
+    role="img"
+  >
+    🛒
+  </span>
+</button>
+`;
